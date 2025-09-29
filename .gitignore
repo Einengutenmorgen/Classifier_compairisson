@@ -1,0 +1,29 @@
+/.DS_Store
+/.env
+/batch_jobs
+/german_manifestos_combined.csv
+/venv
+/data
+cat >> .gitignore << 'EOF'
+# ML Models und Checkpoints
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+checkpoint-*/
+manifesto_classifier/
+manifesto_classifier_context/
+manifesto_classifier_sentence/
+
+# Große Datendateien
+data/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+EOF
