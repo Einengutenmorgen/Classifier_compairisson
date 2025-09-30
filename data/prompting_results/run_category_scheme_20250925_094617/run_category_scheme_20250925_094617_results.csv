@@ -1,0 +1,9 @@
+Template,Party,N_Total,N_Valid,N_Error_Saving,N_Error_Not_All,N_NaN_Predictions,N_NaN_GroundTruth,Pct_Usable,Accuracy,Macro_F1,Micro_F1,Weighted_F1
+run_category_scheme_20250925_094617,linke,2449,2097,0,270,217,83,85.63,0.0,0.0,0.0,0.0
+run_category_scheme_20250925_094617,bsw,1354,1170,0,181,14,3,86.41,0.0,0.0,0.0,0.0
+run_category_scheme_20250925_094617,cdu,2392,2349,0,22,1,21,98.2,0.0,0.0,0.0,0.0
+run_category_scheme_20250925_094617,spd,2140,1851,0,254,559,35,86.5,0.0032,0.0,0.0032,0.0001
+run_category_scheme_20250925_094617,gruene,3550,3273,0,277,8,103,92.2,0.0,0.0,0.0,0.0
+run_category_scheme_20250925_094617,afd,2069,2067,0,0,20,2,99.9,0.0,0.0,0.0,0.0
+run_category_scheme_20250925_094617,fdp,1594,1551,0,3,40,40,97.3,0.0,0.0,0.0,0.0
+run_category_scheme_20250925_094617,sswb,2336,1967,0,301,1,68,84.2,0.0,0.0,0.0,0.0

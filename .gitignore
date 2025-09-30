@@ -1,9 +1,13 @@
 /.DS_Store
 /.env
 /batch_jobs
+batch_jobs*
+/batches
 /german_manifestos_combined.csv
 /venv
-/data
+/data/aggregated
+data/annotated_data
+
 cat >> .gitignore << 'EOF'
 # ML Models und Checkpoints
 *.safetensors
@@ -14,9 +18,9 @@ checkpoint-*/
 manifesto_classifier/
 manifesto_classifier_context/
 manifesto_classifier_sentence/
-
-# Große Datendateien
-data/
+manifesto_classifier_contex2t/
+manifesto_classifier_context2/
+manifesto_classifier_sentence2/
 
 # Python
 __pycache__/
