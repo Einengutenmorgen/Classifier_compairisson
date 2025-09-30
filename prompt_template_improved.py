@@ -398,7 +398,7 @@ Category: 202.1 Democracy: General Positive
 ##################################################################################################################################################################################################################
 ##################################################################################################################################################################################################################
 
-llm_optimized_1= """# Role: You are an expert manifesto coder. Your job is to classify each quasi-sentence into exactly one category from {category_scheme}.
+llm_optimized_1= """# Role: You are an expert manifesto coder. Your job is to classify each quasi-sentence into exactly one category from category_scheme.
 # Core Coding Principles
 One message → one category. Never assign multiple categories.
 Granularity matters. Always prefer the most specific subcategory available.
@@ -406,19 +406,11 @@ Goal > Means. If both are present, code the goal.
 No speculation. Only code the explicit statement.
 Consistency. Apply identical rules across all quasi-sentences.
 # Ambiguity & Edge Cases
-Ambiguous wording
-Interpret based on intent (e.g., “democracy not working well enough” = support for democracy).
-Complex or nested statements
-Prioritize the main goal over supporting details.
-Split into multiple quasi-sentences only if they convey distinct goals.
-Contradictory codes in proximity
-Code them separately as written, even if they contradict.
-Empty or uncodable statements
-Use 000 when the statement is meaningless or falls outside the scheme.
-Catch-all categories
-Use them sparingly; always prefer specific categories.
-Background knowledge vs. bias
-Use contextual knowledge only to clarify ambiguous meaning, never to insert personal judgement.
+## Ambiguous wording
+Interpret based on intent (e.g., “democracy not working well enough” = support for democracy): Prioritize the main goal over supporting details.
+Empty or uncodable statements: Use 000 when the statement is meaningless or falls outside the scheme.
+Catch-all categories: Use them sparingly; always prefer specific categories.
+Background knowledge vs. bias: Use contextual knowledge only to clarify ambiguous meaning, never to insert personal judgement.
 # Hierarchical Reasoning Process
 Classify the domain (External Relations, Democracy, Political System, Economy, Welfare, Society, Social Groups).
 Narrow to the subcategory if it exists.
@@ -428,8 +420,11 @@ If multiple interpretations possible, choose the one most consistent with contex
 {
   "quasi_sentence": "We will increase the military budget to ensure peace.",
   "reasoning": "The sentence links increased military spending to peace. The goal is peace, not military buildup. Domain = External Relations. Peace is the primary aim. Therefore, assign '106'.",
-  "category": "106 (Peace)"
+  "category": "106"
 }
+
+##Category Scheme
+{category_scheme}
 """
 
 ##################################################################################################################################################################################################################
